@@ -57,6 +57,15 @@
           pageTitle: 'Settings picture'
         }
       })
+      .state('settings.dashboard', {
+        url: '/dashboard',
+        templateUrl: '/modules/users/client/views/settings/dashboard.client.view.html',
+        controller: 'DashboardController',
+        controllerAs: 'vm',
+        data: {
+          pageTitle: 'User Dashboard'
+        }
+      })
       .state('settings.package', {
         url: '/package',
         templateUrl: '/modules/users/client/views/settings/package-selection.client.view.html',

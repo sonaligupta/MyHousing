@@ -1,0 +1,24 @@
+<div>
+  <label>name: </label><span ng-bind="name" ></span><br />
+  <label>address: </label><span ng-bind="address" ></span><br />
+  <label>flag: </label><span ng-bind="flagValue" ></span><br />
+</div>
+
+
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Address</th>
+      <th>flagValue</th>
+    </tr>
+    </thead>
+    <tr ng-repeat="x in names" ng-if="x.flagValue==1">
+      <td>{{ x.name }}</td>
+      <td>{{ x.address }}</td>
+      <td>{{ x.flagValue }}</td>
+    </tr>
+  </table>
+</div>
+
