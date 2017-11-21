@@ -15,12 +15,10 @@
     <p class="list-group-item-text" ng-bind="user.email"></p>
   </a>
 </div> -->
-
-
   <div class="list-group">
     <a ng-repeat="listingproperty in vm.pagedItems"
        ui-sref="listingproperties.view({ listingpropertyId: listingproperty._id })"
-       class="list-group-item" ng-if="listingproperty.propertyVerificationFlag==1">
+       class="list-group-item" >
       <!-- <small class="list-group-item-text">
         Posted on
         <span ng-bind="listingproperty.created | date:'mediumDate'"></span>

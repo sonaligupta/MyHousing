@@ -19,6 +19,80 @@
     vm.save = save;
     vm.flagVal = flagVal;
 
+    vm.my_place_id = "ChIJdd4hrwug2EcRmSrV3Vo6llI";
+    $scope.my_place_id = "ChIJdd4hrwug2EcRmSrV3Vo6llI";
+      console.log(listingproperty.my_place_id);
+//     function flagVal(){
+//       console.log('in flagval');
+//       listingproperty.flagValue = 1;
+//       console.log(vm.listingproperty);
+//       console.log(listingproperty);
+// }
+//     }
+
+function flagVal(){
+ listingproperty.flagValue = 1;
+ $http.put('/api/listingproperties/' + listingproperty._id, vm.listingproperty).success(function() {
+      Notification.success('Property flagged successfully');
+  }).error(function() {
+      Notification.error('Property flagged successfully');
+  });
+}
+
+$scope.create = function() {
+  var listingproperties = new listingproperty({
+      title: this.title,
+      content: this.content,
+      ///
+      lon: this.lon,
+      lat: this.lat
+      ///
+  });
+  listingproperties.$save(function(response) {
+      $location.path('listingproperties/' + response._id);
+      $scope.title = '';
+      $scope.content = '';
+      ///
+      $scope.lon = 0;
+      $scope.lat = 0;
+      ///
+  }, function(errorResponse) {
+      $scope.error = errorResponse.data.message;
+  });
+};
+
+$scope.$on('mapInitialized', function(event,map) {
+  var marker = map.markers[0];
+
+$scope.$watch('listingproperty.lat + listingproperty.lon',function(newVal,oldVal){
+            if(newVal === oldVal){return;}
+            // checks if value has changed 
+map.setCenter({lat:$scope.listingproperties.lat,lng:$scope.listingproperties.lon});
+marker.setPosition({lat:$scope.listingproperties.lat,lng:$scope.listingproperties.lon});
+          });
+  });
+  $scope.gotolink= function(event,i) {
+    $location.path('listingproperties/'+ i._id);
+  };
+
+
+
+function geocode(){
+  var location = '239 western Ave Albany NY';
+  axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
+    params:{
+        address:location,
+        key: 'AIzaSyBL0qvZfmILniPR4t-aKbizLu7jTDAkkiE'
+    }
+  })
+  .then(function(response){
+    console.log(response);
+
+  })
+  .catch(function(error){
+      console.log(error);
+  })
+}
     // Remove existing Listingproperty
     function remove() {
       if ($window.confirm('Are you sure you want to delete?')) {

@@ -11,9 +11,8 @@
     var vm = this;
     vm.ListingpropertiesService = ListingpropertiesService;
     vm.user = Authentication.user;
-<<<<<<< HEAD:modules/users/client/controllers/settings/dashboard.client.controller_bkp.js
     //console.log(vm.ListingpropertiesService);
-=======
+
     vm.propertyVerification = propertyVerification;
     vm.remove= remove;
     //console.log(vm.ListingpropertiesService);
@@ -29,8 +28,6 @@
             console.log('Error: ' + data);
           });
         $scope.names.splice(id,1);
->>>>>>> ee29c5be3c4a114b2e7849e354010513407d3797:modules/users/client/controllers/settings/dashboard.client.controller.js
-
     }
 
     function propertyVerification(id){
@@ -49,19 +46,18 @@
     $http.get('/api/listingproperties/')
       .success(function(data) {
         $scope.names = data;
-<<<<<<< HEAD:modules/users/client/controllers/settings/dashboard.client.controller_bkp.js
+
       //  console.log(data[0].name)
         $scope.name = data[0].name;
         $scope.address = data[0].address;
         $scope.flagValue = data[0].flagValue;
        // console.log(data)
-=======
+
         //console.log(data[0].name)
         $scope.name = data[0].name;
         $scope.address = data[0].address;
         $scope.flagValue = data[0].flagValue;
         //console.log(data)
->>>>>>> ee29c5be3c4a114b2e7849e354010513407d3797:modules/users/client/controllers/settings/dashboard.client.controller.js
       })
       .error(function(data) {
         alert(data);
