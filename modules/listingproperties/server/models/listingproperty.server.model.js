@@ -64,6 +64,10 @@ var ListingpropertySchema = new Schema({
   flagValue: {
     type: Number,
     default: '0'
+  },
+  propertyVerificationFlag: {
+    type: Number,
+    default: '0'
   }
 });
 

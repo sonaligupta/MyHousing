@@ -71,9 +71,21 @@
       $http.put('/api/listingproperties/' + listingproperty._id, vm.listingproperty).success(function() {
         Notification.success('Property flagged successfully');
       }).error(function() {
-        Notification.error('Property flagged successfully');
+        Notification.error('Property flagged failed');
       });
     }
+
+    // function propertyVerification(){
+    //   console.log("Property Flag verification.");
+    //   listingproperty.propertyVerificationFlag = 1;
+    //   console.log(listingproperty.propertyVerificationFlag +'......'+ listingproperty._id);
+    //   console.log(vm.listingproperty);
+    //   $http.put('/api/listingproperties/' + listingproperty._id, vm.listingproperty).success(function() {
+    //     Notification.success('Property verified successfully');
+    //   }).error(function() {
+    //     Notification.error('Property verification failed');
+    //   });
+    // }
 
     };
 
