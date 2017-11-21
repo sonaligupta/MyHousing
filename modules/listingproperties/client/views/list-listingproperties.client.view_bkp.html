@@ -20,7 +20,7 @@
   <div class="list-group">
     <a ng-repeat="listingproperty in vm.pagedItems"
        ui-sref="listingproperties.view({ listingpropertyId: listingproperty._id })"
-       class="list-group-item">
+       class="list-group-item" ng-if="listingproperty.propertyVerificationFlag==1">
       <!-- <small class="list-group-item-text">
         Posted on
         <span ng-bind="listingproperty.created | date:'mediumDate'"></span>

@@ -65,6 +65,7 @@ var ListingpropertySchema = new Schema({
     type: Number,
     default: '0'
   },
+<<<<<<< HEAD:modules/listingproperties/server/models/listingproperty.server.model_bkp.js
 content: {
     type: String,
     default: '',
@@ -81,6 +82,12 @@ lon:{
     trim: true
 }
 
+=======
+  propertyVerificationFlag: {
+    type: Number,
+    default: '0'
+  }
+>>>>>>> ee29c5be3c4a114b2e7849e354010513407d3797:modules/listingproperties/server/models/listingproperty.server.model.js
 });
 
 mongoose.model('Listingproperty', ListingpropertySchema);
