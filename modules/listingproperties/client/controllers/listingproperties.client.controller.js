@@ -19,9 +19,9 @@
     vm.save = save;
     vm.flagVal = flagVal;
 
-    vm.my_place_id = "ChIJdd4hrwug2EcRmSrV3Vo6llI";
-    $scope.my_place_id = "ChIJdd4hrwug2EcRmSrV3Vo6llI";
-      console.log(listingproperty.my_place_id);
+    // vm.my_place_id = "ChIJdd4hrwug2EcRmSrV3Vo6llI";
+    // $scope.my_place_id = "ChIJdd4hrwug2EcRmSrV3Vo6llI";
+    //   console.log(listingproperty.my_place_id);
 //     function flagVal(){
 //       console.log('in flagval');
 //       listingproperty.flagValue = 1;

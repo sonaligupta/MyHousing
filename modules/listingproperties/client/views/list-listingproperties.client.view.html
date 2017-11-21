@@ -31,16 +31,13 @@
       <h4 class="list-group-item-text" ng-bind="listingproperty.price"></h4>
       <h4 class="list-group-item-text" ng-bind="listingproperty.unit"></h4>
       <h4 class="list-group-item-text" ng-bind="listingproperty.noofbedroom"></h4>
-      <map center="[0,0]" zoom="1">
-        <marker ng-repeat='listingproperties in listingproperty' position='[{{listingproperties.lat}},{{listingproperties.lon}}]' visible="true" on-click="gotolink(event,listingproperties)">
-            <p class="list-group-item-text" data-ng-bind="listingproperties.lat"></p>
-            <p class="list-group-item-text" data-ng-bind="listingproperties.lon"></p>
+      <!-- <map center="[0,0]" zoom="14">
+        <marker ng-repeat='listingproperties in listingproperty' position='[{{vm.listingproperties.lat}},{{vm.listingproperties.lon}}]' visible="true" on-click="gotolink(event,listingproperties)">
+          <p class="list-group-item-text" ng-bind="vm.listingproperty.lat"></p>
+          <p class="list-group-item-text" ng-bind="vm.listingproperty.lon"></p>
         </marker>
-        <marker ng-repeat='listingproperty in listingproperties' position='[{{listingproperty.lat}},{{listingproperty.lon}}]' visible="true" on-click="gotolink(event,listingproperty)">
-            <p class="list-group-item-text" data-ng-bind="listingproperty.lat"></p>
-            <p class="list-group-item-text" data-ng-bind="listingproperty.lon"></p>
-        </marker>
-    </map>
+        
+    </map> -->
     
       <!-- <h2>{{listingproperty.address}}</h2>
       <h2>{{listingproperty.price}}</h2>

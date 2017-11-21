@@ -25,27 +25,15 @@
       <span ng-if="!vm.listingproperty.user">Deleted User</span>
     </em>
   </small><br>
-  <div
+  <!-- <div
   angular-google-maps-geocoder placeid="{{ vm.my_place_id }}"
   output="out"
   placeholder="Placeholder goes here..."
   min-length="5"
   wait-ms="500"
 ></div>
-<pre>{{ out | json }}</pre>
-<map zoom ='16'>
-      <marker position="[0,0]" visible="true"> </marker>
-  <!--      a initial position must be set because it will prompt the users current geolocation and set it to that -->
-    </map>
+<pre>{{ out | json }}</pre> -->
 
-    Latitude: 
-    <p class="lead" data-ng-bind="listingproperty.lat">{{listingproperty.lat}}</p>
-    Longitude: 
-    <p class="lead" data-ng-bind="listingproperty.lon">{{listingproperty.lon}}</p>
-
-<map center="[{{lat}},{{lon}}]" zoom ='15'>
-    <marker position="[{{lat}},{{lon}}]" visible="true"></marker>
-</map>
   <label></label><span class="lead" ng-bind="vm.listingproperty.address"></span><br />
   <label>Property Description: </label><p class="lead" ng-bind="vm.listingproperty.propertydescription"></p>
   <label>Price: </label><span class="lead" ng-bind="vm.listingproperty.price"></span><br />
@@ -54,5 +42,17 @@
   <label>unit #: </label><span ng-bind="vm.listingproperty.unit" ></span><br />
   <label></label>
 </section>
-<div id="map"></div>
+<!-- <map zoom ='6'>
+  <marker position="[0,0]" visible="true"> </marker>
+     a initial position must be set because it will prompt the users current geolocation and set it to that
+</map> -->
+
+Latitude: 
+<p class="lead" ng-bind="vm.listingproperty.lat">{{vm.listingproperty.lat}}</p>
+Longitude: 
+<p class="lead" ng-bind="vm.listingproperty.lon">{{vm.listingproperty.lon}}</p>
+<script>console.log(vm.listingroperty.lat + vm.listingproperty.lon);</script>
+<map center="[{{vm.listingproperty.lat}},{{vm.listingproperty.lon}}]" zoom ='15'>
+<marker position="[{{vm.listingproperty.lat}},{{vm.listingproperty.lon}}]" visible="true"></marker>
+</map>
  
