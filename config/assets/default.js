@@ -28,7 +28,7 @@ module.exports = {
         'public/lib/angular-resource/angular-resource.js',
         'public/lib/angular-ui-notification/dist/angular-ui-notification.js',
         'public/lib/angular-ui-router/release/angular-ui-router.js',
-        //'//maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyBL0qvZfmILniPR4t-aKbizLu7jTDAkkiE',
+        '//maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyBL0qvZfmILniPR4t-aKbizLu7jTDAkkiE',
         'public/lib/owasp-password-strength-test/owasp-password-strength-test.js',
         //'https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyBL0qvZfmILniPR4t-aKbizLu7jTDAkkiE&place_id=ChIJd8BlQ2BZwokRAFUEcm_qrcA',
         //'//maps.googleapis.com/maps/api/geocode/json/key=AIzaSyBL0qvZfmILniPR4t-aKbizLu7jTDAkkiE',
