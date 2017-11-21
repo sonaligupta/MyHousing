@@ -36,7 +36,7 @@
       vm.listingproperties = data;
       vm.buildPager();
     });
-    console.log(vm.listingproperties);
+   // console.log(vm.listingproperties);
     function buildPager() {
       vm.pagedItems = [];
       vm.itemsPerPage = 15;
@@ -48,7 +48,7 @@
       vm.filteredItems = $filter('filter')(vm.listingproperties, {
         $: vm.search
       });
-      console.log(vm.filteredItems);
+      //console.log(vm.filteredItems);
 
       vm.filterLength = vm.filteredItems.length;
       var begin = ((vm.currentPage - 1) * vm.itemsPerPage);
@@ -62,6 +62,6 @@
     }
 
 
-    console.log(vm.listingproperties);
+  //  console.log(vm.listingproperties);
   }
 }());

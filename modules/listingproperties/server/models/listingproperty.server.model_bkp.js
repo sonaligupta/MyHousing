@@ -64,7 +64,23 @@ var ListingpropertySchema = new Schema({
   flagValue: {
     type: Number,
     default: '0'
-  }
+  },
+content: {
+    type: String,
+    default: '',
+    trim: true
+},
+lat:{
+    type: Number,
+    default: 0,
+    trim: true
+},
+lon:{
+    type: Number,
+    default: 0,
+    trim: true
+}
+
 });
 
 mongoose.model('Listingproperty', ListingpropertySchema);
