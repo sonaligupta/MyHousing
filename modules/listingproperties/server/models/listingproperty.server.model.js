@@ -60,6 +60,10 @@ var ListingpropertySchema = new Schema({
   user: {
     type: Schema.ObjectId,
     ref: 'User'
+  },
+  flagValue: {
+    type: Number,
+    default: '0'
   }
 });
 
