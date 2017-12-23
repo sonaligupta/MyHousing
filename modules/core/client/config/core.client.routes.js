@@ -5,6 +5,8 @@
     .module('core.routes')
     .config(routeConfig);
 
+  //angular.module('PropertyPortal', ['addCtrl', 'geolocation', 'gservice']);
+
   routeConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 
   function routeConfig($stateProvider, $urlRouterProvider) {
@@ -33,6 +35,18 @@
         controller: 'HomeController',
         controllerAs: 'vm'
       })
+      // .state('add', {
+      //   url: '/add',
+      //   templateUrl: '/modules/core/client/views/index.html',
+      //   controller: 'addCtrl',
+      //   controllerAs: 'addCtrl'
+      // })
+      // .state('search', {
+      //   url: '/search',
+      //   templateUrl: '/modules/core/client/views/Queryform.html',
+      //   controller: 'queryCtrl',
+      //   controllerAs: 'queryCtrl'
+      // })
       .state('not-found', {
         url: '/not-found',
         templateUrl: '/modules/core/client/views/404.client.view.html',

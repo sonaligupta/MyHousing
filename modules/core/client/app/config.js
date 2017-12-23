@@ -21,6 +21,8 @@
     angular.module(applicationModuleName).requires.push(moduleName);
   }
 
+  //angular.module('PropertyPortal', ['addCtrl', 'geolocation', 'gservice']);
+
   // Angular-ui-notification configuration
   angular.module('ui-notification').config(function (NotificationProvider) {
     NotificationProvider.setOptions({

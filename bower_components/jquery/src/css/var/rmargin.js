@@ -1,0 +1,3 @@
+appdefine(function() {
+	return (/^margin/);
+});
